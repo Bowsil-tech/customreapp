@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="customeracpp.GuestPage" xmlns:local="clr-namespace:customeracpp;assembly=customeracpp">
+
+         <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="BaseLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Gray"/>
+                <Setter Property="FontSize" Value="18"  ></Setter>
+            </Style>
+            <Style x:Key="PacificoLabelStyle" TargetType="Label" BaseResourceKey="BaseLabelStyle">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String" iOS="EtihadAltisBook" Android="EtihadAltisBook.ttf#EtihadAltisBook"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <AbsoluteLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Label x:Name="titlelbl" Text="Test" Margin="20" IsVisible="false" />
+      
+        <Image Source="{local:ImageResource customeracpp.images.backflighthome.png}" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"/>
+        <Frame CornerRadius="15"  HasShadow="True"  BackgroundColor="#fff" Margin="0"  AbsoluteLayout.LayoutBounds="0.5, 0.5, .85, 0.85" AbsoluteLayout.LayoutFlags="All" >
+
+              <Grid HorizontalOptions="FillAndExpand" WidthRequest="100">
+
+                    <Grid.RowDefinitions>
+                           <RowDefinition Height="90"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+               
+
+                    </Grid.ColumnDefinitions>
+                  <Label  Grid.Column="0" Grid.Row="0" >
+
+                       <Label.Text>
+        Hello Guest,
+
+      Please click on below button for assistance to Gate.
+    </Label.Text>
+
+                  </Label>
+
+                       <Button  Grid.Column="0" Grid.Row="1" Text="NAVIGATE TO GATE" Clicked="Button_Clicked" FontAttributes="Bold" BackgroundColor="#2e9fb2"  TextColor="White" />
+                    <Button Grid.Column="0" Grid.Row="2"  Text="SHARE MY LOCATION" Clicked="AlertAgent" FontAttributes="Bold"  BackgroundColor="#2e9fb2"  TextColor="White" />
+         
+                  </Grid>
+
+               
+            
+        </Frame>
+ </AbsoluteLayout>
+</ContentPage>

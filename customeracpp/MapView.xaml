@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage  xmlns:webview="clr-namespace:Xam.Plugin.WebView.Abstractions;assembly=Xam.Plugin.WebView.Abstractions" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="customeracpp.MapView">
+  <StackLayout>  
+        <Label Text="WebView with progess bar"  
+           FontSize="20"  
+           TextColor="BlueViolet"  
+           BackgroundColor="White"/>  
+        <ProgressBar Progress="0.2"  
+                 HorizontalOptions="FillAndExpand"  
+                 x:Name="progress"  
+                 IsVisible="True"/>  
+   
+      
+   <WebView x:Name="interneview" >
+
+   </WebView>
+  
+    </StackLayout>  
+</ContentPage>
