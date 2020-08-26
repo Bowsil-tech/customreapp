@@ -40,7 +40,7 @@ namespace customeracpp
             await Browser.OpenAsync(uri, new BrowserLaunchOptions
             {
                 LaunchMode = BrowserLaunchMode.SystemPreferred,
-                TitleMode = BrowserTitleMode.Show,
+                TitleMode = BrowserTitleMode.Hide,
                 PreferredToolbarColor = Color.AliceBlue,
                 PreferredControlColor = Color.Violet
             });
